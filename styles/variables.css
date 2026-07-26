@@ -41,8 +41,7 @@
 --fs-xl:   1.4rem;    /* brand name                                  */
 --fs-2xl:  1.6rem;    /* section headings                            */
 --fs-3xl:  1.8rem;    /* stat numbers                                */
---fs-4xl:  2.6rem;    /* relief heading                              */
---fs-5xl:  3rem;      /* hero heading                                */
+--fs-4xl:  2.6rem;    /* relief heading                              */    /* hero heading                                */
 
 /* ---------- Spacing scale (4px base) ----------------------------------
    Every hard-coded px value in the original file maps to one of
