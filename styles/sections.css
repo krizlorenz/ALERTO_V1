@@ -463,7 +463,6 @@
   font-size: var(--fs-xs, 0.78rem);
   color: var(--grey-soft);
 }
-
 /* ---------- Responsive --------------------------------------------------------- */
 @media (max-width: 1000px) {
   /* HERO */

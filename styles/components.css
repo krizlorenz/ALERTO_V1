@@ -53,7 +53,7 @@
 .tag-relief        { background: var(--green); }
 
 /* ---------- Icon tint backgrounds -------------------------------------------
-   Shared by board icons and advisory icons — one place to manage the
+  Shared by board icons and advisory icons — one place to manage the
    tint palette instead of repeating hex values per component. */
 .icon-maroon { background: var(--tint-maroon); }
 .icon-orange { background: var(--tint-orange); }
@@ -176,9 +176,14 @@
 .qc-pink   { background: var(--tint-pink); }
 
 .quick-top {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
   display: flex;
-  justify-content: space-between;
-  margin-bottom: var(--space-4);
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  font-size: 1rem;
 }
 .quick-icon { font-size: 1.3rem; }
 .quick-title { font-weight: 700; margin-bottom: var(--space-1); }
