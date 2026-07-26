@@ -1,11 +1,4 @@
-/* =====================================================================
-  ALERTO — Components
-  Self-contained, reusable UI pieces used across sections. Each block
-  is named after its root class and grouped with its own hover/state
-  rules and responsive tweaks so it can be found and edited in one place.
-   ===================================================================== */
-
-/* ---------- Buttons -------------------------------------------------------- */
+/*  Buttons  */
 .btn {
   display: inline-flex;
   align-items: center;
@@ -17,6 +10,7 @@
   white-space: nowrap;
   transition: transform var(--transition-fast), box-shadow var(--transition-fast);
 }
+
 .btn:hover { transform: translateY(-2px); }
 
 .btn-primary {
@@ -38,7 +32,7 @@
   font-weight: 600;
 }
 
-/* ---------- Tags / status pills --------------------------------------------- */
+/*  Tags / status pills  */
 .tag {
   font-size: var(--fs-sm);
   font-weight: 700;
@@ -52,16 +46,14 @@
 .tag-announcement { background: var(--orange); }
 .tag-relief        { background: var(--green); }
 
-/* ---------- Icon tint backgrounds -------------------------------------------
-  Shared by board icons and advisory icons — one place to manage the
-   tint palette instead of repeating hex values per component. */
+/*  Icon tint backgrounds  */
 .icon-maroon { background: var(--tint-maroon); }
 .icon-orange { background: var(--tint-orange); }
 .icon-dark   { background: var(--tint-dark); }
 .icon-purple { background: var(--tint-purple); }
 .icon-green  { background: var(--tint-green); }
 
-/* ---------- Live Board card --------------------------------------------------- */
+/*  Live Board card  */
 .board-card {
   border: 1px solid var(--border);
   border-radius: var(--radius-lg);
@@ -116,7 +108,7 @@
   margin-top: var(--space-2);
 }
 
-/* ---------- Panel (advisories / quick access wrapper) -------------------------- */
+/* Panel (advisories / quick access wrapper)  */
 .panel {
   border: 1px solid var(--border);
   border-radius: var(--radius-xl);
@@ -129,7 +121,7 @@
   font-size: var(--fs-md);
 }
 
-/* ---------- Advisory list ------------------------------------------------------ */
+/*  Advisory list  */
 .advisory-list li {
   display: flex;
   align-items: flex-start;
@@ -161,7 +153,7 @@
   font-size: var(--fs-md);
 }
 
-/* ---------- Quick access tiles -------------------------------------------------- */
+/*  Quick access tiles  */
 .quick-card {
   border-radius: var(--radius-md);
   padding: var(--space-5);
@@ -197,7 +189,7 @@
   color: var(--ink);
 }
 
-/* ---------- Relief operation card ------------------------------------------------ */
+/*  Relief operation card  */
 .relief-card {
   border-radius: var(--radius-lg);
   overflow: hidden;
@@ -209,7 +201,7 @@
 .relief-info p { font-size: 0.85rem; color: var(--grey); margin-bottom: var(--space-2); }
 .relief-info .time { font-size: var(--fs-sm); color: var(--grey); }
 
-/* ---------- Newsletter form (footer) --------------------------------------------- */
+/*  Newsletter form (footer)  */
 .subscribe-form {
   display: flex;
   margin-top: var(--space-3);

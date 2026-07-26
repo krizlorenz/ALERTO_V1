@@ -1,6 +1,6 @@
 :root {
 
-  /* ---------- Color ---------------------------------------------------- */
+  /* Color */
 --maroon-dark: #7B0525;
 --maroon-mid:  #C23B59;
 --orange:      #F05923;
@@ -24,7 +24,7 @@
 --tint-green:  #DFF3E5;
 --tint-pink:   #F1E9F7;
 
-  /* ---------- Typography ------------------------------------------------ */
+  /*  Typography */
 --font-display: "Poppins", sans-serif;
 --font-body: "Inter", sans-serif;
 
@@ -37,9 +37,6 @@
 --fs-3xl:  1.8rem;    /* stat numbers                                */
 --fs-4xl:  2.6rem;    /* relief heading                              */    /* hero heading                                */
 
-/* ---------- Spacing scale (4px base) ----------------------------------
-Every hard-coded px value in the original file maps to one of
-these — keeps section/card padding and gaps consistent. */
 --space-1: 4px;
 --space-2: 8px;
 --space-3: 12px;
@@ -55,24 +52,24 @@ these — keeps section/card padding and gaps consistent. */
 --space-20: 80px;
 --space-25: 100px;
 
-  /* ---------- Radius ------------------------------------------------------ */
+  /*  Radius  */
 --radius-sm: 10px;
 --radius-md: 14px;
 --radius-lg: 16px;
 --radius-xl: 18px;
 --radius-full: 999px;
 
-  /* ---------- Shadow -------------------------------------------------------- */
+  /*  Shadow  */
 --shadow-btn: 0 8px 20px rgba(123, 5, 37, 0.25);
 --shadow-strip: 0 20px 40px rgba(123, 5, 37, 0.28);
 --shadow-card-hover: 0 12px 24px rgba(0, 0, 0, 0.08);
 
-  /* ---------- Motion --------------------------------------------------------- */
+  /*  Motion  */
 --transition-fast: 0.15s;
 --transition-base: 0.2s;
 --ticker-duration: 22s;
 
-  /* ---------- Layout ----------------------------------------------------------- */
+  /* Layout */
 --page-pad: 48px;
 --page-pad-sm: 20px;
 }
