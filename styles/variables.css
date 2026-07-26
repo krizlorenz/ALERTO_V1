@@ -1,9 +1,3 @@
-/* =====================================================================
-   ALERTO — Design Tokens
-   Same palette and type choices as the original stylesheet, just
-   promoted into variables so every value has one source of truth.
-   ===================================================================== */
-
 :root {
 
   /* ---------- Color ---------------------------------------------------- */
@@ -44,8 +38,8 @@
 --fs-4xl:  2.6rem;    /* relief heading                              */    /* hero heading                                */
 
 /* ---------- Spacing scale (4px base) ----------------------------------
-   Every hard-coded px value in the original file maps to one of
-   these — keeps section/card padding and gaps consistent. */
+Every hard-coded px value in the original file maps to one of
+these — keeps section/card padding and gaps consistent. */
 --space-1: 4px;
 --space-2: 8px;
 --space-3: 12px;

@@ -1,10 +1,3 @@
-/* =====================================================================
-  ALERTO — Sections
-  Page-specific chrome that only appears once: the advisory ticker,
-  navbar, hero, stat strip, relief section heading, and footer.
-   ===================================================================== */
-
-/* =============================== TICKER =================================== */
 .ticker-bar {
   background: var(--maroon-dark);
   color: var(--white);
@@ -48,7 +41,7 @@
 }
 .ticker-content span { padding-right: var(--space-10); }
 
-/* =============================== NAVBAR ==================================== */
+/*  NAVBAR  */
 .navbar {
   display: flex;
   align-items: center;
@@ -113,7 +106,7 @@
   transform:translateX(6px);
 }
 
-/* ================= HAMBURGER ================= */
+/*  HAMBURGER  */
 
 .menu-toggle {
   display: none;
@@ -174,11 +167,11 @@
   visibility:visible;
 }
 
-/* =============================== HERO ======================================= */
+/*  HERO  */
 .hero{
   position: relative;
   width:100%;
-  height: calc(100vh - 120px);   /* full screen minus navbar+ticker */
+  height: calc(100vh - 120px); 
   min-height:700px;
   max-height:900px;
   overflow:hidden;
@@ -207,8 +200,8 @@
     max-width: 60%;
     display: flex;
     flex-direction: column;
-    align-items: flex-end;   /* Align everything to the right */
-    text-align: right;        /* Right-align text */
+    align-items: flex-end; 
+    text-align: right;       
     z-index: 5;
 }
 
@@ -232,7 +225,7 @@
   margin-bottom: var(--space-6);
 }
 .hero h1 span {
-  color: var(--maroon-mid);
+  color: var(--maroon-dark);
   display: block;
 }
 
@@ -252,10 +245,6 @@
   justify-content: flex-end;
 }
 
-/* =============================== STAT STRIP ==================================
-  Overlaps upward into the hero by --space-15 — .section below
-  compensates for the overlap with a matching negative margin
-   (see layout.css) so the rhythm between sections stays even. */
 .stat-strip {
   background: linear-gradient(120deg, var(--maroon-dark), var(--maroon-mid));
   margin: 0 var(--page-pad);
@@ -315,7 +304,7 @@
   opacity:1;
 }
 
-/* =================== STAT DIVIDERS =================== */
+/*  STAT DIVIDERS  */
 
 .stat-item:not(:last-child)::after{
   content:"";
@@ -401,7 +390,7 @@
   font-weight: 600;
 }
 
-/* =============================== RELIEF OPERATIONS HEADING ===================== */
+/* RELIEF OPERATIONS HEADING  */
 .relief-heading {
   font-family: var(--font-display);
   font-weight: 800;
@@ -412,7 +401,7 @@
   -webkit-text-stroke: 1px var(--maroon-dark);
 }
 
-/* =============================== FOOTER ========================================= */
+/* FOOTER  */
 .site-footer {
   background: var(--pink-light);
   padding: var(--space-14) var(--page-pad) var(--space-6);
@@ -463,7 +452,7 @@
   font-size: var(--fs-xs, 0.78rem);
   color: var(--grey-soft);
 }
-/* ---------- Responsive --------------------------------------------------------- */
+/*Responsive*/
 @media (max-width: 1000px) {
   /* HERO */
   .hero{
