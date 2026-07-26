@@ -1,0 +1,85 @@
+/* =====================================================================
+   ALERTO — Design Tokens
+   Same palette and type choices as the original stylesheet, just
+   promoted into variables so every value has one source of truth.
+   ===================================================================== */
+
+:root {
+
+  /* ---------- Color ---------------------------------------------------- */
+--maroon-dark: #7B0525;
+--maroon-mid:  #C23B59;
+--orange:      #F05923;
+--green:       #258244;
+--pink-light:  #F6DFE9;
+
+--ink:   #1C1620;
+--grey:  #6E6470;
+--grey-soft: #8A7680;   /* footer-bottom text, previously hard-coded  */
+--grey-footer: #6E5A63; /* footer copy, previously hard-coded         */
+
+--border: #ECE3E8;
+--white:  #FFFFFF;
+
+/* Tinted icon backgrounds — named the same as the classes that use
+  them so it's obvious where each one belongs. */
+--tint-maroon: var(--pink-light);
+--tint-orange: #FDE3D8;
+--tint-dark:   #ECECEC;
+--tint-purple: #EDE6FB;
+--tint-green:  #DFF3E5;
+--tint-pink:   #F1E9F7;
+
+  /* ---------- Typography ------------------------------------------------ */
+--font-display: "Poppins", sans-serif;
+--font-body: "Inter", sans-serif;
+
+--fs-sm:   0.75rem;   /* 12px — captions, timestamps, trends       */
+--fs-base: 0.85rem;   /* 13.6px — small copy (desc, quick-desc)    */
+--fs-md:   0.92rem;   /* body copy inside cards / nav               */
+--fs-lg:   1.02rem;   /* hero paragraph                              */
+--fs-xl:   1.4rem;    /* brand name                                  */
+--fs-2xl:  1.6rem;    /* section headings                            */
+--fs-3xl:  1.8rem;    /* stat numbers                                */
+--fs-4xl:  2.6rem;    /* relief heading                              */
+--fs-5xl:  3rem;      /* hero heading                                */
+
+/* ---------- Spacing scale (4px base) ----------------------------------
+   Every hard-coded px value in the original file maps to one of
+   these — keeps section/card padding and gaps consistent. */
+--space-1: 4px;
+--space-2: 8px;
+--space-3: 12px;
+--space-4: 16px;
+--space-5: 20px;
+--space-6: 24px;
+--space-7: 28px;
+--space-8: 32px;
+--space-10: 40px;
+--space-12: 48px;
+--space-14: 56px;
+--space-15: 60px;
+--space-20: 80px;
+--space-25: 100px;
+
+  /* ---------- Radius ------------------------------------------------------ */
+--radius-sm: 10px;
+--radius-md: 14px;
+--radius-lg: 16px;
+--radius-xl: 18px;
+--radius-full: 999px;
+
+  /* ---------- Shadow -------------------------------------------------------- */
+--shadow-btn: 0 8px 20px rgba(123, 5, 37, 0.25);
+--shadow-strip: 0 20px 40px rgba(123, 5, 37, 0.28);
+--shadow-card-hover: 0 12px 24px rgba(0, 0, 0, 0.08);
+
+  /* ---------- Motion --------------------------------------------------------- */
+--transition-fast: 0.15s;
+--transition-base: 0.2s;
+--ticker-duration: 22s;
+
+  /* ---------- Layout ----------------------------------------------------------- */
+--page-pad: 48px;
+--page-pad-sm: 20px;
+}

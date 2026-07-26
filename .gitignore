@@ -1,0 +1,20 @@
+# OS-generated files
+.DS_Store
+Thumbs.db
+desktop.ini
+# Editor / IDE
+.vscode/
+.idea/
+# Logs
+*.log
+# Dependency folders (if you add npm later)
+node_modules/
+package-lock.json
+# Environment/config files
+.env
+.env.local
+# Build/output folders
+dist/
+build/
+# Zip archives
+*.zip

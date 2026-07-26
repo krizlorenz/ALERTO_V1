@@ -1,0 +1,8 @@
+/* =====================================================================
+   ALERTO — Utilities
+   Small, single-purpose helpers. Keep this list short — promote a
+   pattern to components.css if it starts repeating a lot.
+   ===================================================================== */
+
+.text-center { text-align: center; }
+.text-muted  { color: var(--grey); }

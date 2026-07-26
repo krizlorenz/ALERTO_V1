@@ -1,0 +1,74 @@
+/* =====================================================================
+  ALERTO — Layout
+  Structural placement only: section spacing rhythm, container padding,
+  and grid templates. Visual styling of the things that sit inside
+  these grids lives in components.css / sections.css.
+   ===================================================================== */
+
+/* ---------- Section rhythm ---------------------------------------------
+  Sections sit directly beneath the stat strip, which overlaps upward
+  by --space-15 (see .stat-strip in sections.css) — the negative
+  margin here compensates for that overlap so spacing stays even. */
+.section {
+  padding: 0 var(--page-pad) var(--space-15);
+  margin-top: calc(var(--space-8) * -1);
+}
+
+.section-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: var(--space-5);
+  margin-bottom: var(--space-6);
+}
+
+.section-head h2,
+.section-head h3 {
+  font-weight: 700;
+  font-size: var(--fs-2xl);
+}
+
+.section-sub {
+  color: var(--grey);
+  font-size: var(--fs-base);
+  margin-top: var(--space-1);
+}
+
+/* ---------- Live Board grid --------------------------------------------- */
+.board-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--space-5);
+}
+
+/* ---------- Advisories + Quick Access two-column split ------------------ */
+.two-col {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: var(--space-6);
+}
+
+.quick-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-4);
+}
+
+/* ---------- Relief Operations grid --------------------------------------- */
+.relief-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-6);
+}
+
+/* ---------- Responsive --------------------------------------------------- */
+@media (max-width: 1000px) {
+  .board-grid { grid-template-columns: repeat(2, 1fr); }
+  .two-col { grid-template-columns: 1fr; }
+  .relief-grid { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 600px) {
+  .section { padding: 0 var(--page-pad-sm) var(--space-10); }
+  .quick-grid { grid-template-columns: 1fr; }
+}

@@ -1,0 +1,14 @@
+/* =====================================================================
+  ALERTO — Animations
+  Keyframes only. Hover/transition declarations live next to the
+  component they affect (components.css / sections.css).
+   ===================================================================== */
+
+@keyframes scroll-left {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ticker-content { animation: none; }
+}

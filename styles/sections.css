@@ -1,0 +1,320 @@
+/* =====================================================================
+  ALERTO — Sections
+  Page-specific chrome that only appears once: the advisory ticker,
+  navbar, hero, stat strip, relief section heading, and footer.
+   ===================================================================== */
+
+/* =============================== TICKER =================================== */
+.ticker-bar {
+  background: var(--maroon-dark);
+  color: var(--white);
+  display: flex;
+  align-items: center;
+  font-size: var(--fs-sm);
+  overflow: hidden;
+}
+
+.live-tag {
+  flex-shrink: 0;
+  background: rgba(255, 255, 255, 0.12);
+  padding: var(--space-2) var(--space-5);
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  border-right: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #FFD24C;
+  display: inline-block;
+}
+
+.ticker-track {
+  flex: 1;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.ticker-content {
+  display: inline-flex;
+  gap: var(--space-15);
+  padding-left: var(--space-10);
+  animation: scroll-left var(--ticker-duration) linear infinite;
+}
+.ticker-content span { padding-right: var(--space-10); }
+
+/* =============================== NAVBAR ==================================== */
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--space-5) var(--page-pad);
+  border-bottom: 1px solid var(--border);
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+}
+
+.brand-text {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.1;
+}
+
+.brand-name {
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: var(--fs-xl);
+  color: var(--maroon-dark);
+  letter-spacing: 0.02em;
+}
+
+.brand-sub {
+  font-size: var(--fs-sm);
+  color: var(--grey);
+  font-weight: 500;
+}
+
+.logo img {
+  width: 42px;
+  height: 47px;
+  object-fit: contain;
+}
+
+.main-nav {
+  display: flex;
+  align-items: center;
+  gap: var(--space-8);
+  margin-left: auto;     
+  margin-right: var(--space-8);  
+  font-weight: 500;
+  font-size: var(--fs-md);
+  color: var(--ink);
+}
+
+.main-nav a {
+  padding-bottom: var(--space-1);
+  transition: color var(--transition-base);
+}
+.main-nav a:hover,
+.main-nav a.active {
+  color: var(--maroon-mid);
+  border-bottom: 2px solid var(--maroon-mid);
+}
+
+/* =============================== HERO ======================================= */
+.hero {
+  align-items: stretch;   /* was: center — makes the image column fill full height */
+}
+
+.hero-image {
+  height: 100%;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+}
+
+.hero-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: left center;   /* keeps "COEA" in frame instead of centering */
+  display: block;
+}
+
+.hero-content { position: relative; z-index: 2; }
+
+.pill {
+  display: inline-block;
+  background: var(--pink-light);
+  color: var(--maroon-dark);
+  padding: var(--space-2) var(--space-5);
+  border-radius: var(--radius-full);
+  font-size: var(--fs-base);
+  font-weight: 600;
+  margin-bottom: var(--space-6);
+}
+
+.hero h1 {
+  font-size: var(--fs-5xl);
+  line-height: 1.12;
+  font-weight: 800;
+  color: var(--ink);
+  margin-bottom: var(--space-6);
+}
+.hero h1 span {
+  color: var(--maroon-mid);
+  display: block;
+}
+
+.hero-copy {
+  color: var(--grey);
+  font-size: var(--fs-lg);
+  line-height: 1.6;
+  max-width: 520px;
+  margin-bottom: var(--space-8);
+}
+
+.hero-actions {
+  display: flex;
+  gap: var(--space-4);
+  flex-wrap: wrap;
+}
+
+/* =============================== STAT STRIP ==================================
+   Overlaps upward into the hero by --space-15 — .section below
+   compensates for the overlap with a matching negative margin
+   (see layout.css) so the rhythm between sections stays even. */
+.stat-strip {
+  background: linear-gradient(120deg, var(--maroon-dark), var(--maroon-mid));
+  margin: 0 var(--page-pad);
+  border-radius: var(--radius-xl);
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  padding: var(--space-8) var(--space-2);
+  transform: translateY(calc(var(--space-15) * -1 - 10px));
+  box-shadow: var(--shadow-strip);
+}
+
+.stat-item {
+  display: flex;
+  gap: var(--space-4);
+  align-items: flex-start;
+  padding: 0 var(--space-6);
+  color: var(--white);
+  border-right: 1px solid rgba(255, 255, 255, 0.18);
+}
+.stat-item:last-child { border-right: none; }
+
+.stat-icon {
+  width: 42px;
+  height: 42px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+}
+.stat-icon img {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+}
+
+.stat-number {
+  font-family: var(--font-display);
+  font-size: var(--fs-3xl);
+  font-weight: 800;
+}
+.stat-number span {
+  display: block;
+  font-size: var(--fs-sm);
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.stat-desc {
+  font-size: var(--fs-sm);
+  color: rgba(255, 255, 255, 0.8);
+  margin-top: var(--space-2);
+}
+.stat-trend {
+  font-size: var(--fs-sm);
+  color: #FFD9A0;
+  margin-top: var(--space-1);
+  font-weight: 600;
+}
+
+/* =============================== RELIEF OPERATIONS HEADING ===================== */
+.relief-heading {
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: var(--fs-4xl);
+  color: var(--maroon-dark);
+  letter-spacing: 0.02em;
+  margin-bottom: var(--space-7);
+  -webkit-text-stroke: 1px var(--maroon-dark);
+}
+
+/* =============================== FOOTER ========================================= */
+.site-footer {
+  background: var(--pink-light);
+  padding: var(--space-14) var(--page-pad) var(--space-6);
+  margin-top: var(--space-10);
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr 1.2fr 1.2fr;
+  gap: var(--space-8);
+  padding-bottom: var(--space-8);
+}
+
+.footer-desc {
+  font-size: 0.82rem;
+  color: var(--grey-footer);
+  line-height: 1.6;
+  margin: var(--space-4) 0;
+  max-width: 320px;
+}
+.footer-desc.small { max-width: 280px; }
+
+.social-row {
+  display: flex;
+  gap: var(--space-3);
+  font-size: 1.1rem;
+}
+
+.footer-col h5 {
+  font-family: var(--font-display);
+  font-weight: 700;
+  margin-bottom: var(--space-4);
+  color: var(--ink);
+}
+.footer-col a {
+  display: block;
+  font-size: var(--fs-md);
+  color: var(--grey-footer);
+  margin-bottom: var(--space-3);
+}
+.footer-col a:hover { color: var(--maroon-dark); }
+
+.footer-bottom {
+  border-top: 1px solid rgba(123, 5, 37, 0.15);
+  padding-top: var(--space-4);
+  display: flex;
+  justify-content: space-between;
+  font-size: var(--fs-xs, 0.78rem);
+  color: var(--grey-soft);
+}
+
+/* ---------- Responsive --------------------------------------------------------- */
+@media (max-width: 1000px) {
+  .hero { grid-template-columns: 1fr; padding-bottom: var(--space-15); }
+  .hero-image { height: 380px; order: -1; }
+  .stat-strip { grid-template-columns: repeat(2, 1fr); transform: translateY(calc(var(--space-8) * -1)); }
+  .stat-item {
+    border-right: none;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.18);
+    padding-bottom: var(--space-4);
+    margin-bottom: var(--space-3);
+  }
+  .footer-grid { grid-template-columns: 1fr 1fr; }
+  .main-nav { display: none; }
+}
+
+@media (max-width: 600px) {
+  .navbar { padding: var(--space-4) var(--page-pad-sm); }
+  .hero { padding: var(--space-10) var(--page-pad-sm) var(--space-10); }
+  .hero h1 { font-size: 2.1rem; }
+  .stat-strip { margin: 0 var(--page-pad-sm); grid-template-columns: 1fr; }
+  .footer-grid { grid-template-columns: 1fr; }
+  .footer-bottom { flex-direction: column; gap: var(--space-2); }
+  .relief-heading { font-size: 1.8rem; }
+}
