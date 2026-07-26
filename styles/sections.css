@@ -184,8 +184,8 @@
 }
 
 /* =============================== STAT STRIP ==================================
-   Overlaps upward into the hero by --space-15 — .section below
-   compensates for the overlap with a matching negative margin
+  Overlaps upward into the hero by --space-15 — .section below
+  compensates for the overlap with a matching negative margin
    (see layout.css) so the rhythm between sections stays even. */
 .stat-strip {
   background: linear-gradient(120deg, var(--maroon-dark), var(--maroon-mid));
@@ -194,19 +194,88 @@
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   padding: var(--space-8) var(--space-2);
+  overflow: hidden;
   transform: translateY(calc(var(--space-15) * -1 - 10px));
   box-shadow: var(--shadow-strip);
 }
 
 .stat-item {
+  position: relative;
   display: flex;
-  gap: var(--space-4);
   align-items: flex-start;
-  padding: 0 var(--space-6);
+  gap: var(--space-4);
+  padding: var(--space-5) var(--space-6);
   color: var(--white);
-  border-right: 1px solid rgba(255, 255, 255, 0.18);
+  text-decoration: none;
+  border-radius: 18px;
+  overflow: hidden;
+  cursor: pointer;
+  transition:
+    transform 0.35s ease,
+    background 0.35s ease,
+    box-shadow 0.35s ease;
 }
-.stat-item:last-child { border-right: none; }
+
+.stat-item:hover {
+  transform: translateY(-10px);
+  background: rgba(255, 255, 255, 0.08);
+  box-shadow:
+    inset 0 1px 0 rgba(255,255,255,.08),
+    0 18px 35px rgba(0,0,0,.18);
+}
+
+/* Top Glow */
+.stat-item::before{
+  content:"";
+  position:absolute;
+  top:0;
+  left:20%;
+  right:20%;
+  height:2px;
+  background:linear-gradient(
+    90deg,
+    transparent,
+    rgba(255,255,255,.7),
+    transparent
+  );
+  opacity:0;
+  transition:opacity .35s ease;
+}
+
+.stat-item:hover::before{
+  opacity:1;
+}
+
+/* =================== STAT DIVIDERS =================== */
+
+.stat-item:not(:last-child)::after{
+  content:"";
+  position:absolute;
+  top:18%;
+  right:0;
+  width:1px;
+  height:64%;
+  background:linear-gradient(
+    to bottom,
+    transparent 0%,
+    rgba(255,255,255,.35) 25%,
+    rgba(255,255,255,.65) 50%,
+    rgba(255,255,255,.35) 75%,
+    transparent 100%
+  );
+  transition:
+    opacity .35s ease,
+    transform .35s ease;
+}
+
+.stat-item:hover::after{
+    opacity:1;
+    transform:scaleY(1.08);
+}
+
+.stat-item:not(:hover)::after{
+    opacity:.75;
+}
 
 .stat-icon {
   width: 42px;
@@ -215,18 +284,35 @@
   justify-content: center;
   align-items: center;
   flex-shrink: 0;
+  transition: transform 0.35s ease;
 }
+
 .stat-icon img {
   width: 60px;
   height: 60px;
   object-fit: contain;
 }
 
+.stat-item:hover .stat-icon{
+  transform:
+    translateY(-4px)
+    scale(1.15)
+    rotate(-8deg);
+}
+
 .stat-number {
   font-family: var(--font-display);
   font-size: var(--fs-3xl);
   font-weight: 800;
+  transition: transform 0.35s ease;
 }
+
+.stat-item:hover .stat-number{
+  transform:scale(1.08);
+  text-shadow:
+    0 0 10px rgba(255,255,255,.35);
+}
+
 .stat-number span {
   display: block;
   font-size: var(--fs-sm);
