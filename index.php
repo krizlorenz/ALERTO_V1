@@ -1,3 +1,12 @@
+<?php
+session_start();
+include 'db.php';
+
+// Fetch the latest announcements from database
+$announcement_query = "SELECT * FROM announcements ORDER BY created_at DESC LIMIT 5";
+$announcements_result = $conn->query($announcement_query);
+?>
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -20,9 +29,16 @@
       <div class="live-tag"><span class="dot"></span> LIVE ADVISORY</div>
       <div class="ticker-track">
         <div class="ticker-content">
-          <span>Typhoon Bagwis — Signal No. 2 raised over Cagayan Valley expected to make landfall — July 9, 2026</span>
-          <span>Typhoon Bagwis — Signal No. 2 raised over Cagayan Valley expected to make landfall — July 9, 2026</span>
-          <span>Typhoon Bagwis — Signal No. 2 raised over Cagayan Valley expected to make landfall — July 9, 2026</span>
+          <?php if (isset($announcements_result) && $announcements_result->num_rows > 0): ?>
+              <?php while($row = $announcements_result->fetch_assoc()): ?>
+                  <span>
+                      <strong>[<?php echo htmlspecialchars($row['category']); ?>]</strong> 
+                      <?php echo htmlspecialchars($row['title']); ?> — <?php echo htmlspecialchars($row['content']); ?>
+                  </span>
+              <?php endwhile; ?>
+          <?php else: ?>
+              <span>No active emergency advisories at this time. Stay safe, COEAns!</span>
+          <?php endif; ?>
         </div>
       </div>
     </div>
@@ -55,7 +71,7 @@
       </button>
 
       <div class="nav-right">
-        <a href="#" class="btn btn-primary">
+        <a href="request.php" class="btn btn-primary">
           ★ Request Help
         </a>
       </div>
@@ -73,7 +89,7 @@
           <p class="hero-copy">ALERTO is a web-based platform that lets affected students request assistance, follow official advisories, and stay informed — while giving the COEA Student Council a clear, centralized way to review, prioritize, and respond.</p>
           <div class="hero-actions">
             <a href="#" class="btn btn-outline">★ View Live Board</a>
-            <a href="#" class="btn btn-primary">★ Request Assistance</a>
+            <a href="request.php" class="btn btn-primary">★ Request Assistance</a>
           </div>
         </div>
       </div>
