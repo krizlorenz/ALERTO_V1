@@ -289,7 +289,10 @@ $announcements_result = $conn->query($announcement_query);
           </div>
           <p class="footer-desc">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since 1966, when designers at Letraset and James Mosley, the librarian at St Bride</p>
           <div class="social-row">
-            <span>📘</span><span>📷</span><span>✉</span><span>💬</span>
+            <span><img src="icons/mail.png"></span>
+            <span><img src="icons/facebook.png"></span>
+            <span><img src="icons/mess.png"></span>
+            <span><img src="icons/insta.png"></span>
           </div>
         </div>
 

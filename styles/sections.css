@@ -422,12 +422,32 @@
   margin: var(--space-4) 0;
   max-width: 320px;
 }
-.footer-desc.small { max-width: 280px; }
+.footer-desc.small { 
+  max-width: 280px;
+}
 
 .social-row {
   display: flex;
   gap: var(--space-3);
-  font-size: 1.1rem;
+  align-items: center;
+}
+
+.social-row span {
+  width: 38px;
+  height: 38px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.social-row img {
+  width: 20px;
+  height: 20px;
+  object-fit: contain;
+}
+
+.social-row img:hover {
+    transform: scale(1.1);
 }
 
 .footer-col h5 {
