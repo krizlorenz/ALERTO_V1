@@ -12,7 +12,7 @@ $announcements_result = $conn->query($announcement_query);
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ALERTO — CSU-Carig Student Council</title>
+    <title>ALERTO - CSU-Carig Student Council</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 
@@ -171,7 +171,7 @@ $announcements_result = $conn->query($announcement_query);
               <img src="icons/settings.png">
             </div>
             <div class="advisory-text">
-              <p>Signal No. 2 raised over Cagayan Valley — classes</p>
+              <p>Signal No. 2 raised over Cagayan Valley - classes</p>
               <span class="time">8:00 AM</span>
             </div>
             <span class="tag tag-weather">Weather</span>
@@ -191,7 +191,7 @@ $announcements_result = $conn->query($announcement_query);
               <img src="icons/user.png">
             </div>
             <div class="advisory-text">
-              <p>Signal No. 2 raised over Cagayan Valley — classes suspended, relief hub open at the covered court.</p>
+              <p>Signal No. 2 raised over Cagayan Valley - classes suspended, relief hub open at the covered court.</p>
               <span class="time">8:00 AM</span>
             </div>
             <span class="tag tag-relief">Relief</span>

@@ -6,3 +6,19 @@
 
 .text-center { text-align: center; }
 .text-muted  { color: var(--grey); }
+
+.w-full { width: 100%; justify-content: center; }
+
+.icon {
+   display: block;
+   object-fit: contain;
+}
+.icon-sm {
+   width: 14px; height: 14px; 
+}
+.icon-md {
+   width: 18px; height: 18px; 
+}
+.icon-lg { 
+   width: 26px; height: 26px; 
+}

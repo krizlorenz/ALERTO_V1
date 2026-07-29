@@ -72,4 +72,7 @@
   /* Layout */
 --page-pad: 48px;
 --page-pad-sm: 20px;
+
+--portal-bg: #EFE6E7;                                    /* the soft box behind the login content */
+--shadow-portal: 0 30px 60px -20px rgba(123, 5, 37, 0.22); /* card lift shadow */
 }

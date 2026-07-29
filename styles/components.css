@@ -224,3 +224,181 @@
   width: 46px;
   font-size: 1rem;
 }
+
+/*  Portal card (login)  */
+.portal-card {
+  background: var(--white);
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-portal);
+  padding: var(--space-8);
+}
+
+.portal-head {
+  display: flex;
+  gap: var(--space-4);
+  align-items: flex-start;
+  margin-bottom: var(--space-6);
+}
+
+.portal-avatar {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.portal-title {
+  font-size: var(--fs-2xl);
+  font-weight: 800;
+  color: var(--maroon-dark);
+  margin-bottom: var(--space-1);
+}
+
+.portal-sub {
+  font-size: var(--fs-base);
+  color: var(--grey);
+  line-height: 1.4;
+}
+
+/*  OR divider  */
+.divider-or {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  margin: var(--space-6) 0;
+  color: var(--grey);
+  font-size: var(--fs-sm);
+  font-weight: 700;
+}
+.divider-or::before,
+.divider-or::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: var(--border);
+}
+
+/*  OAuth buttons  */
+.oauth-group {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+/* Shared shape/behavior for both social sign-in buttons */
+.oauth-button-google,
+.oauth-button-facebook {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-3);
+  width: 100%;
+  padding: var(--space-3) var(--space-6);
+  border-radius: var(--radius-sm);
+  font-weight: 600;
+  font-size: var(--fs-md);
+  transition: .2s ease;
+}
+
+.oauth-button-google:hover,
+.oauth-button-facebook:hover {
+  transform: translateY(-2px);
+}
+
+/* Google — white background, subtle border */
+.oauth-button-google {
+  background: var(--white);
+  border: 1.5px solid var(--border);
+  color: var(--ink);
+}
+.oauth-button-google:hover {
+  border-color: var(--maroon-mid);
+}
+
+/* Facebook — brand blue, matches Facebook's own button style */
+.oauth-button-facebook {
+  background: #1877F2;
+  border: 1.5px solid #1877F2;
+  color: var(--white);
+}
+.oauth-button-facebook:hover {
+  background: #1461C9;
+  border-color: #1461C9;
+}
+
+/*  Hotline callout  */
+.hotline-box {
+  display: flex;
+  gap: var(--space-3);
+  align-items: flex-start;
+  background: var(--pink-light);
+  border-radius: var(--radius-md);
+  padding: var(--space-4) var(--space-5);
+  margin-top: var(--space-6);
+}
+
+.hotline-label {
+  font-size: var(--fs-md);
+  font-weight: 700;
+  color: var(--maroon-dark);
+}
+.hotline-sub {
+  font-size: var(--fs-base);
+  color: var(--grey);
+  margin: 2px 0 4px;
+}
+.hotline-number {
+  font-size: var(--fs-lg);
+  font-weight: 800;
+  color: var(--maroon-dark);
+}
+
+/*  Admin link  */
+.admin-link {
+  display: block;
+  text-align: center;
+  margin-top: var(--space-6);
+}
+
+/*  Icon sizing for <img>-based icons inside the portal card  */
+.portal-avatar img {
+  width: 26px;
+  height: 26px;
+  object-fit: contain;
+}
+
+.btn-icon {
+  width: 16px;
+  height: 16px;
+  object-fit: contain;
+}
+
+/* Icon inside either social sign-in button */
+.oauth-button-icon {
+  width: 18px;
+  height: 18px;
+  object-fit: contain;
+}
+
+.inline-icon {
+  width: 12px;
+  height: 12px;
+  object-fit: contain;
+  vertical-align: middle;
+}
+
+.hotline-box .advisory-icon img {
+  width: 16px;
+  height: 16px;
+  object-fit: contain;
+}
+
+.btn,
+.oauth-button-google,
+.oauth-button-facebook,
+.link-view-all {
+  text-decoration: none;
+}

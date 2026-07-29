@@ -457,7 +457,9 @@
   color: var(--ink);
 }
 .footer-col a {
-  display: block;
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
   font-size: var(--fs-md);
   color: var(--grey-footer);
   margin-bottom: var(--space-3);
@@ -472,6 +474,43 @@
   font-size: var(--fs-xs, 0.78rem);
   color: var(--grey-soft);
 }
+
+/*  LOGIN / PORTAL SECTION  */
+.login-wrap {
+  background: var(--portal-bg);
+  border-radius: var(--radius-xl);
+  margin: var(--space-15) var(--page-pad);
+  padding: var(--space-14) var(--space-10);
+  display: grid;
+  grid-template-columns: 1.15fr 1fr;
+  align-items: center;
+  gap: var(--space-10);
+}
+
+.pill-solid {
+  background: var(--white);
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+}
+
+.login-heading {
+  font-size: 60px;
+  line-height: 1.05;
+  font-weight: 800;
+  margin: var(--space-6) 0 var(--space-6);
+}
+.login-heading span {
+  display: block;
+  color: var(--maroon-dark);
+}
+
+.login-sub {
+  color: var(--grey);
+  font-size: var(--fs-lg);
+  line-height: 1.6;
+  max-width: 480px;
+}
+
+
 /*Responsive*/
 @media (max-width: 1000px) {
   /* HERO */
@@ -554,6 +593,16 @@
 
   .main-nav.active{
     right:0;
+  }
+
+  .login-wrap {
+    grid-template-columns: 1fr;
+    margin: var(--space-10) var(--page-pad-sm);
+    padding: var(--space-10) var(--space-6);
+    text-align: center;
+  }
+  .login-sub {
+    margin: 0 auto;
   }
 }
 
@@ -643,5 +692,8 @@
     gap:12px;
   }
 
+  .login-heading { 
+    font-size: 2.4rem; 
+  }
 }
 
