@@ -307,9 +307,15 @@ $announcements_result = $conn->query($announcement_query);
 
         <div class="footer-col">
           <h5>Contact us</h5>
-          <a href="mailto:krizlorenz30@gmail.com">✉ krizlorenz30@gmail.com</a>
-          <a href="tel:09059677194">📞 0905 967 7194</a>
-          <a href="#">📍 CollegeOfEngineering-StudentEdition@gmail.com</a>
+          <a href="mailto:krizlorenz30@gmail.com">
+            <img src="icons/mail.png" alt="" class="icon icon-sm inline-icon">
+            krizlorenz30@gmail.com</a>
+          <a href="tel:09059677194">
+            <img src="icons/phonenum.png" alt="" class="icon icon-sm inline-icon">
+            0905 967 7194</a>
+          <a href="#">
+            <img src="icons/location.png" alt="" class="icon icon-sm inline-icon">
+            CollegeOfEngineering-StudentEdition@gmail.com</a>
         </div>
 
         <div class="footer-col">
