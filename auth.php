@@ -118,7 +118,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             Connect with Google
             </a>
             <a href="#" class="oauth-button-facebook">
-            <img src="icons/facebook.png" alt="" class="oauth-button-icon">
+            <img src="icons/epbi.png" alt="" class="oauth-button-icon">
             Connect with Facebook
             </a>
         </div>
